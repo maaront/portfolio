@@ -8,7 +8,7 @@ export default function Home() {
         I MAKE
       </h1>
       <h1>DIGITAL PRODUCTS</h1>
-      <img src="../public/assets/down-arrow.svg" alt="arrow" />
+      <img src="/assets/down-arrow.svg" alt="arrow" />
     </div>
   );
 }

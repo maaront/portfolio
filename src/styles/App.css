@@ -100,7 +100,7 @@ body {
 /* WORK */
 
 .body-work {
-    background-color: #eff4fc;
+  background-color: #eff4fc;
 }
 
 #work-container {
@@ -141,20 +141,20 @@ card img {
 /* ABOUT */
 
 #about-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0px;
 }
 
 .headshot {
-    height: 300px;
+  height: 300px;
 }
 #about-content p {
-    font-size: 24px;
-    font-weight: 300;
-    padding: 0px 50px;
-    max-width: 500px;
+  font-size: 24px;
+  font-weight: 300;
+  padding: 0px 50px;
+  max-width: 500px;
 }
 
 /* REFERRALS */
@@ -162,29 +162,30 @@ card img {
 /* CONTACT */
 
 .body-contact {
-    background-color: #F52C68;
+  background-color: #f52c68;
 }
 
 #contact-container {
-    background-color: #F52C68;
+  background-color: #f52c68;
 }
 
 #headline_contact {
-    color: white;
+  color: white;
 }
 
 #contact-container form {
-    padding: 100px;
-    color: white;
-    font-size: 50px;
-    font-weight: 600;
+  padding: 100px;
+  color: white;
+  font-size: 50px;
+  font-weight: 600;
+  
 }
 
 input {
-    width: 350px;
-    border: 0;
-    border-bottom: 5px solid white;
-    background: none;
+  width: 350px;
+  border: 0;
+  border-bottom: 5px solid white;
+  background: none;
 }
 
 /* BUTTON WITH TRADITIONAL GRADIENT*/
@@ -215,30 +216,33 @@ input {
 } */
 
 .btn {
-    font-family: "BioRhyme", serif;
-    color: white;
-    background: url("https://images.pexels.com/photos/752484/pexels-photo-752484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
+  font-family: "BioRhyme", serif;
+  color: white;
+  background: url("https://images.pexels.com/photos/752484/pexels-photo-752484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
     0 0 / cover repeat;
   background-position: 0px 0px;
   font-size: 35px;
   font-weight: 600;
   text-align: center;
-  /* background-repeat: repeat-x; */
+  text-shadow: 0 .25em 0.25em rgba(0,0,0,0.65);
+  background-repeat: repeat-x;
   background-size: 75%;
-  animation: animatedButton 50s linear infinite;
-    display: inline-flex;
-    padding: 15px;
-    flex-direction: column;
-    align-items: flex-start;
-    border: none;
-    border-radius: 50px;
+  animation: animatedButton 35s linear infinite;
+  /* padding: 10px; */
+  align-items: flex-start;
+  border: none;
+  border-radius: 50px;
+  text-align: center;
+  margin-top: 25px;
 }
 
+
+
 @keyframes animatedButton {
-    from {
-      background-position: 0 100%;
-    }
-    to {
-      background-position: 100% 100%;
-    }
+  from {
+    background-position: 0 45%;
   }
+  to {
+    background-position: 100% 100%;
+  }
+}

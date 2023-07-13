@@ -22,7 +22,7 @@ function Nav({ currentPage, handlePageChange }) {
         <a
           href="#work"
           onClick={() => handlePageChange('Work')}
-          // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+          // Check to see if the currentPage is `Work`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
           className={currentPage === 'Work' ? 'nav-link active' : 'nav-link'}
         >
           WORK
@@ -32,7 +32,7 @@ function Nav({ currentPage, handlePageChange }) {
         <a
           href="#about"
           onClick={() => handlePageChange('About')}
-          // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+          // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
           className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
         >
           ABOUT
@@ -42,7 +42,7 @@ function Nav({ currentPage, handlePageChange }) {
         <a
           href="#referrals"
           onClick={() => handlePageChange('Referrals')}
-          // Check to see if the currentPage is `Blog`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+          // Check to see if the currentPage is `Referrals`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
           className={currentPage === 'Referrals' ? 'nav-link active' : 'nav-link'}
         >
           REFERRALS

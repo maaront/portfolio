@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import About from "./About";
 import Contact from "./Contact";
 import Home from "./Home";

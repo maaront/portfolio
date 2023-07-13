@@ -47,7 +47,7 @@ export default function Portfolio() {
     };
 
     // Add event listener for scrolling
-    window.addEventListener("wheel", handleScroll, { passive: true });
+    window.addEventListener("wheel", handleScroll, { passive: false });
 
     // remove the event listener on unmount
     return () => {

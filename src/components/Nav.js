@@ -14,7 +14,7 @@ function Nav({ currentPage, handlePageChange }) {
           // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
           className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
         >
-          Home
+          HOME
         </a>
       </li>
       <li className="nav-item">
@@ -24,7 +24,7 @@ function Nav({ currentPage, handlePageChange }) {
           // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
           className={currentPage === 'Work' ? 'nav-link active' : 'nav-link'}
         >
-          Work
+          WORK
         </a>
       </li>
       <li className="nav-item">
@@ -34,7 +34,7 @@ function Nav({ currentPage, handlePageChange }) {
           // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
           className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
         >
-          About
+          ABOUT
         </a>
       </li>
       <li className="nav-item">
@@ -44,7 +44,7 @@ function Nav({ currentPage, handlePageChange }) {
           // Check to see if the currentPage is `Blog`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
           className={currentPage === 'Referrals' ? 'nav-link active' : 'nav-link'}
         >
-          Referrals
+          REFERRALS
         </a>
       </li>
       <li className="nav-item">
@@ -54,7 +54,7 @@ function Nav({ currentPage, handlePageChange }) {
           // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
           className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
         >
-          Contact
+          CONTACT
         </a>
       </li>
     </ul>

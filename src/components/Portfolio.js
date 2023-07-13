@@ -40,9 +40,11 @@ export default function Portfolio() {
 
       const currentIndex = pages.indexOf(currentPage); // Get the current page index
       if (event.deltaY > 0 && currentIndex < pages.length - 1) { // If the scroll is down and there is a next page...
-        setCurrentPage(pages[currentIndex + 1]); //...go to next page
+        setLastPageChangeTime(currentTime); //...update the last page change time (for debouncing) and then...
+        setCurrentPage(pages[currentIndex + 1]); //...go to next page.
       } else if (event.deltaY < 0 && currentIndex > 0) { // If the scroll is up and there is a previous page...
-        setCurrentPage(pages[currentIndex - 1]); //...go to previous page
+        setLastPageChangeTime(currentTime); //...update the last page change time (for debouncing) and then...
+        setCurrentPage(pages[currentIndex - 1]); //...go to previous page.
       }
     };
 
@@ -53,7 +55,7 @@ export default function Portfolio() {
     return () => {
       window.removeEventListener("wheel", handleScroll);
     };
-  }, [currentPage]); // Re-run the effect when `currentPage` changes
+  }, [currentPage, lastPageChangeTime]); // Re-run the effect when `currentPage` changes
 
 
   // This method is checking to see what the value of `currentPage` is. Depending on the value of currentPage, we return the corresponding component to render.

@@ -9,6 +9,7 @@ import Work from "./Work";
 
 export default function Portfolio() {
   const [currentPage, setCurrentPage] = useState("Home");
+  const [lastPageChangeTime, setLastPageChangeTime] = useState(Date.now()); // This is for debouncing the scroll event
 
   // Define colors for the background of each page
   const pageBackgroundColors = {
@@ -29,6 +30,14 @@ export default function Portfolio() {
   // This effect is for detecting when the user scrolls and changing the page accordingly
   useEffect(() => {
     const handleScroll = (event) => {
+      event.preventDefault(); // Prevent page content from scrolling when changing pages
+
+      // Begin "debouncing" to prevent the scroll event from firing too often
+      const currentTime = Date.now(); // Get the current time
+      if (currentTime - lastPageChangeTime < 1000) { // If the last page change was less than 1000ms ago (1 second)...
+        return; //...do nothing. 
+      }
+
       const currentIndex = pages.indexOf(currentPage); // Get the current page index
       if (event.deltaY > 0 && currentIndex < pages.length - 1) { // If the scroll is down and there is a next page...
         setCurrentPage(pages[currentIndex + 1]); //...go to next page

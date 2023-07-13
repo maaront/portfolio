@@ -1,9 +1,12 @@
+
 html,
 body {
   width: 100%;
   height: 100%;
   font-family: 'BioRhyme', serif;
 }
+
+ /* NAVIGATION */
 
 .nav {
     margin-top: 25px;
@@ -47,6 +50,35 @@ body {
 nav li a:hover {
     color: #F8D34F;
 }
+nav li a:active {
+    color: #F8D34F;
+}
+
+/* HOME */
+
+#headline-1 {
+    font-size: 60px;
+    font-weight: 600;
+    color: #F8D34F;
+}
+
+#headline-2 {
+    font-size: 90px;
+    font-weight: 600;
+    background: url("https://images.pexels.com/photos/1191710/pexels-photo-1191710.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") 0 0 / cover repeat;
+    color: #de466c;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* WORK */
+
+/* ABOUT */
+
+/* REFERRALS */
+
+/* CONTACT */
 
 .btn {
     font-family: 'BioRhyme', serif;

@@ -66,9 +66,27 @@ nav li a:active {
     font-size: 90px;
     font-weight: 600;
     background: url("https://images.pexels.com/photos/1191710/pexels-photo-1191710.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") 0 0 / cover repeat;
+    background: url("https://images.pexels.com/photos/752484/pexels-photo-752484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") 0 0 / cover repeat;
+    /* background: url("https://images.pexels.com/photos/2612938/pexels-photo-2612938.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") 0 0 / cover repeat; */
+    /* background: url("https://images.pexels.com/photos/1566909/pexels-photo-1566909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") 0 0 / cover repeat; */
     color: #de466c;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    background-size: 50%;
+    animation: animatedBackground 60s linear infinite;
+    
+}
+
+@keyframes animatedBackground {
+    from {
+        background-position: 0 100%;
+    }
+    to {
+        background-position: 100% 100%;
+    }
+    
 }
 
 

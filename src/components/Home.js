@@ -7,7 +7,7 @@ export default function Home() {
       <div className="mask-text">
         <h1 id="headline-2">DIGITAL <br></br>PRODUCTS</h1>
       </div>
-      <img src="/assets/down-arrow.svg" alt="arrow" />
+      <img className="home-arrow" src="/assets/down-arrow.svg" alt="arrow" />
     </div>
   );
 }

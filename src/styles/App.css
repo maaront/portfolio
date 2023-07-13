@@ -114,11 +114,15 @@ card {
   overflow: hidden;
   cursor: pointer;
   width: 400px;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 card img {
   width: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 
 /* body {
@@ -131,6 +135,23 @@ card img {
 } */
 
 /* ABOUT */
+
+#about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px;
+}
+
+.headshot {
+    height: 300px;
+}
+#about-content p {
+    font-size: 24px;
+    font-weight: 300;
+    padding: 0px 50px;
+    max-width: 500px;
+}
 
 /* REFERRALS */
 

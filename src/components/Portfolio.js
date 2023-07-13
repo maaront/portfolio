@@ -34,7 +34,17 @@ export default function Portfolio() {
       {/* We are passing the currentPage from state and the function to update it */}
       <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
       {/* Here we are calling the renderPage method which will return a component  */}
-      {renderPage()}
+      <SwitchTransition>
+        <CSSTransition
+          key={currentPage} // this tells react to switch components when the `currentPage` changes
+          addEndListener={(node, done) => { // this tells react to listen to the `transitionend` event
+            node.addEventListener("transitionend", done, false); // this tells react when the transition is done
+          }}
+          classNames='fade' // gives a class name to the transition for css to use
+        >
+          {renderPage()}
+        </CSSTransition>
+      </SwitchTransition>
     </div>
   );
 }

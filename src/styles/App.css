@@ -1,101 +1,134 @@
-
 html,
 body {
   width: 100%;
   height: 100%;
-  font-family: 'BioRhyme', serif;
+  font-family: "BioRhyme", serif;
 }
 
- /* NAVIGATION */
+/* NAVIGATION */
 
 .nav {
-    margin-top: 25px;
-    
+  margin-top: 25px;
+  background-color: inherit;
+  /* position: absolute;
+    top: 0; */
+  /* left: 20; */
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+}
+
+.nav ul {
+  margin-top: 2rem;
 }
 
 .nav li {
-    list-style: none;
-    font-weight: 800;
-    padding-bottom: 10px;
-    margin-right: 2rem;
-    line-height: 1.5rem;
-    
+  list-style: none;
+  font-weight: 800;
+  margin-right: 2rem;
+  line-height: 2rem;
 }
 
-.nav li a{
-    color: #00CEA0;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    text-decoration: none;
-    
+.nav li a {
+  color: #00cea0;
+  text-decoration: none;
 }
 
-.nav::after {
-    content: '';
-    position: absolute;
-    background-color: #EFF4FC;
-    height: 200px;
-    top: 0;
-    width: 25px;
-    right: 18px;
-    z-index: -1;
+.nav-container::after {
+  content: "";
+  position: absolute;
+  background-color: #eff4fc;
+  height: 200px;
+  top: 0;
+  width: 25px;
+  right: 18px;
+  z-index: -1;
 }
 
-.navitem:hover {
-    color: #F8D34F;
-    cursor: none;
+.nav-link:hover {
+  color: #f8d34f;
+  cursor: default;
+  transition: 0.2s;
 }
 
-nav li a:hover {
-    color: #F8D34F;
-}
-nav li a:active {
-    color: #F8D34F;
+.nav-link:focus {
+  color: #f8d34f;
 }
 
 /* HOME */
 
-#headline-1 {
-    font-size: 60px;
-    font-weight: 600;
-    color: #F8D34F;
+.page-container {
+  padding-left: 50px;
+}
+
+.headline {
+  font-size: 60px;
+  font-weight: 600;
+  color: #f8d34f;
 }
 
 #headline-2 {
-    font-size: 90px;
-    font-weight: 600;
-    /* background: url("https://images.pexels.com/photos/1191710/pexels-photo-1191710.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") 0 0 / cover repeat; */
-    background: url("https://images.pexels.com/photos/752484/pexels-photo-752484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") 0 0 / cover repeat;
-    /* background: url("https://images.pexels.com/photos/2612938/pexels-photo-2612938.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") 0 0 / cover repeat; */
-    /* background: url("https://images.pexels.com/photos/1566909/pexels-photo-1566909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") 0 0 / cover repeat; */
-    color: #de466c;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-position: 0px 0px;
-    background-repeat: repeat-x;
-    background-size: 50%;
-    animation: animatedBackground 60s linear infinite;
-    
+  font-size: 90px;
+  font-weight: 600;
+  background: url("https://images.pexels.com/photos/752484/pexels-photo-752484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
+    0 0 / cover repeat;
+  color: #de466c;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: 0px 0px;
+  background-repeat: repeat-x;
+  background-size: 50%;
+  animation: animatedBackground 75s linear infinite;
 }
 
 @keyframes animatedBackground {
-    from {
-        background-position: 0 100%;
-    }
-    to {
-        background-position: 100% 100%;
-    }
-    
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 100%;
+  }
 }
 
 .home-arrow {
-    transform: rotate(-90deg);
-    height: 100px;
-    padding: 15px 20px;
+  transform: rotate(-90deg);
+  height: 100px;
+  padding: 15px 20px;
 }
 
 /* WORK */
+
+#work-container {
+  background-color: #eff4fc;
+  height: 100%;
+  width: 100%;
+}
+
+#headline_work {
+  color: #00cea0;
+}
+
+card {
+  display: flex;
+  overflow: hidden;
+  cursor: pointer;
+  width: 400px;
+}
+
+card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-auto-flow: column;
+  place-content: center;
+  background: #425a52;
+} */
 
 /* ABOUT */
 
@@ -104,8 +137,8 @@ nav li a:active {
 /* CONTACT */
 
 .btn {
-    font-family: 'BioRhyme', serif;
-    color: white;
+  font-family: "BioRhyme", serif;
+  color: white;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;

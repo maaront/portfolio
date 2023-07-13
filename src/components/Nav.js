@@ -5,6 +5,7 @@ import React from 'react';
 // We assign them to their own variable names
 function Nav({ currentPage, handlePageChange }) {
   return (
+    <div class="nav-container">
     <ul className="nav">
       <li className="nav-item">
         <a
@@ -58,6 +59,7 @@ function Nav({ currentPage, handlePageChange }) {
         </a>
       </li>
     </ul>
+    </div>
   );
 }
 

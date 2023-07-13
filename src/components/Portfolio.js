@@ -40,11 +40,12 @@ export default function Portfolio() {
     // Add event listener for scrolling
     window.addEventListener("wheel", handleScroll, { passive: true });
 
-    // Clean up event listener on unmount
+    // remove the event listener on unmount
     return () => {
       window.removeEventListener("wheel", handleScroll);
     };
   }, [currentPage]); // Re-run the effect when `currentPage` changes
+
 
   // This method is checking to see what the value of `currentPage` is. Depending on the value of currentPage, we return the corresponding component to render.
   const renderPage = () => {

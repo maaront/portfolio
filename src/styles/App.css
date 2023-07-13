@@ -99,6 +99,10 @@ body {
 
 /* WORK */
 
+.body-work {
+    background-color: #eff4fc;
+}
+
 #work-container {
   background-color: #eff4fc;
   height: 100%;
@@ -157,7 +161,34 @@ card img {
 
 /* CONTACT */
 
-.btn {
+.body-contact {
+    background-color: #F52C68;
+}
+
+#contact-container {
+    background-color: #F52C68;
+}
+
+#headline_contact {
+    color: white;
+}
+
+#contact-container form {
+    padding: 100px;
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+input {
+    width: 350px;
+    border: 0;
+    border-bottom: 5px solid white;
+    background: none;
+}
+
+/* BUTTON WITH TRADITIONAL GRADIENT*/
+/* .btn {
   font-family: "BioRhyme", serif;
   color: white;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
@@ -181,4 +212,33 @@ card img {
   100% {
     background-position: 0% 50%;
   }
+} */
+
+.btn {
+    font-family: "BioRhyme", serif;
+    color: white;
+    background: url("https://images.pexels.com/photos/752484/pexels-photo-752484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
+    0 0 / cover repeat;
+  background-position: 0px 0px;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  /* background-repeat: repeat-x; */
+  background-size: 75%;
+  animation: animatedButton 50s linear infinite;
+    display: inline-flex;
+    padding: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    border: none;
+    border-radius: 50px;
 }
+
+@keyframes animatedButton {
+    from {
+      background-position: 0 100%;
+    }
+    to {
+      background-position: 100% 100%;
+    }
+  }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { CSSTransition, SwitchTransition } from 'react-transition-group';
+import { CSSTransition, SwitchTransition } from "react-transition-group";
 import About from "./About";
 import Contact from "./Contact";
 import Home from "./Home";
@@ -11,19 +11,40 @@ export default function Portfolio() {
   const [currentPage, setCurrentPage] = useState("Home");
 
   // Define colors for the background of each page
-const pageBackgroundColors = {
-  Home: `#ffffff`,
-  Work: `#eff4fc`,
-  About: `#ffffff`,
-  Referrals: `#eff4fc`,
-  Contact: `#f52c68`
-}
+  const pageBackgroundColors = {
+    Home: `#ffffff`,
+    Work: `#eff4fc`,
+    About: `#ffffff`,
+    Referrals: `#eff4fc`,
+    Contact: `#f52c68`,
+  };
 
-useEffect(() => {
-  // Update the body background color to match the new page
-  document.body.style.backgroundColor = pageBackgroundColors[currentPage];
-}, [currentPage]); //Re-run this effect when the currentPage changes
+  useEffect(() => {
+    // Update the body background color to match the new page
+    document.body.style.backgroundColor = pageBackgroundColors[currentPage];
+  }, [currentPage]); //Re-run this effect when the currentPage changes
 
+  const pages = ["Home", "Work", "About", "Referrals", "Contact"];
+
+  // This effect is for detecting when the user scrolls and changing the page accordingly
+  useEffect(() => {
+    const handleScroll = (event) => {
+      const currentIndex = pages.indexOf(currentPage); // Get the current page index
+      if (event.deltaY > 0 && currentIndex < pages.length - 1) { // If the scroll is down and there is a next page...
+        setCurrentPage(pages[currentIndex + 1]); //...go to next page
+      } else if (event.deltaY < 0 && currentIndex > 0) { // If the scroll is up and there is a previous page...
+        setCurrentPage(pages[currentIndex - 1]); //...go to previous page
+      }
+    };
+
+    // Add event listener for scrolling
+    window.addEventListener("wheel", handleScroll, { passive: true });
+
+    // Clean up event listener on unmount
+    return () => {
+      window.removeEventListener("wheel", handleScroll);
+    };
+  }, [currentPage]); // Re-run the effect when `currentPage` changes
 
   // This method is checking to see what the value of `currentPage` is. Depending on the value of currentPage, we return the corresponding component to render.
   const renderPage = () => {
@@ -52,10 +73,11 @@ useEffect(() => {
       <SwitchTransition>
         <CSSTransition
           key={currentPage} // this tells react to switch components when the `currentPage` changes
-          addEndListener={(node, done) => { // this tells react to listen to the `transitionend` event
+          addEndListener={(node, done) => {
+            // this tells react to listen to the `transitionend` event
             node.addEventListener("transitionend", done, false); // this tells react when the transition is done
           }}
-          classNames='fade' // gives a class name to the transition for css to use
+          classNames="fade" // gives a class name to the transition for css to use
         >
           {renderPage()}
         </CSSTransition>

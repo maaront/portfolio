@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import About from "./About";
 import Contact from "./Contact";
@@ -9,6 +9,21 @@ import Work from "./Work";
 
 export default function Portfolio() {
   const [currentPage, setCurrentPage] = useState("Home");
+
+  // Define colors for the background of each page
+const pageBackgroundColors = {
+  Home: `#ffffff`,
+  Work: `#eff4fc`,
+  About: `#ffffff`,
+  Referrals: `#eff4fc`,
+  Contact: `#f52c68`
+}
+
+useEffect(() => {
+  // Update the body background color to match the new page
+  document.body.style.backgroundColor = pageBackgroundColors[currentPage];
+}, [currentPage]); //Re-run this effect when the currentPage changes
+
 
   // This method is checking to see what the value of `currentPage` is. Depending on the value of currentPage, we return the corresponding component to render.
   const renderPage = () => {

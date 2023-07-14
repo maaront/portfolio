@@ -11,11 +11,11 @@ export default function Work() {
   <div className="overlay">
     <div className = "items"></div>
     <div className = "items head">
-      <h3>Baseball Schedule</h3>
-      <p>Example text for what this project was all about and what I learned</p>
+      <h3>Baseball Tracker</h3>
+      
     </div>
     <div className = "items tech">
-      <p>CSS // JS // NODE</p>
+      <p>OPEN WEATHER // ESPN STATS // JS</p>
     </div>
 </div>
 </div>
@@ -24,11 +24,11 @@ export default function Work() {
   <div className="overlay">
     <div className = "items"></div>
     <div className = "items head">
-      <h3>Yard to Table</h3>
-      <p>Example text for what this project was all about and what I learned</p>
+      <h3>LeafLink</h3>
+      
     </div>
     <div className = "items tech">
-      <p>CSS // JS // NODE</p>
+      <p>NODE // EXPRESS // TAILWIND // SEQUELIZE // HANDLEBARS</p>
     </div>
 </div>
 </div>
@@ -37,11 +37,11 @@ export default function Work() {
   <div className="overlay">
     <div className = "items"></div>
     <div className = "items head">
-      <h3>Baseball Schedule</h3>
-      <p>Example text for what this project was all about and what I learned</p>
+      <h3>Yard To Table</h3>
+      
     </div>
     <div className = "items tech">
-      <p>CSS // JS // NODE</p>
+      <p>REACT // MONGOOSE // NODE // EXPRESS</p>
     </div>
 </div>
 </div>

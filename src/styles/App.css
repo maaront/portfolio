@@ -199,22 +199,26 @@ body {
 
 .work-grid {
   display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
 }
 
 .card-container {
-  width: 300px;
-  height: 400px;
+  width: 250px;
+  height: 333.33px;
   position: relative;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
   margin: auto;
+  margin-top: 25px;
   background-color: black;
   background-size: cover;
   cursor: pointer;
   -webkit-box-shadow: 0 0 5px #000;
   box-shadow: 0 0 5px #000;
+  flex-shrink: 1;
 }
 
 #baseball-schedule {
@@ -253,7 +257,7 @@ body {
 .head {
   font-size: 30px;
   line-height: 40px;
-
+font-weight: 800;
   transform: translateY(40px);
   transition: all 0.7s;
 }
@@ -265,9 +269,9 @@ body {
 }
 
 .tech {
-  font-size: 22px;
-  line-height: 10px;
-  font-weight: bold;
+  font-size: 18px;
+  /* line-height: 10px; */
+  /* font-weight: bold; */
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.7s;

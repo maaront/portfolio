@@ -13,7 +13,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="page-container">
+    <div className="home-container">
       <CSSTransition in={showHeadline} timeout={500} classNames="fade" unmountOnExit>
         <h1 className="headline">I MAKE</h1>
       </CSSTransition>

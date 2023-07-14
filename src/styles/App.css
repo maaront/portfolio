@@ -98,14 +98,13 @@ body {
   padding-bottom: 5px;
   margin-top: 11.5px;
   transition: width 0.5s ease-in-out;
-  
 }
 
 /* HOME */
 
 .home-container {
-    padding: 75px 0 0 50px;
-  }
+  padding: 75px 0 0 50px;
+}
 
 .headline {
   font-size: 60px;
@@ -196,93 +195,96 @@ body {
   width: 100%;
 }
 
-
-
 /* WORK GRID */
 
-
-.card-container {
-    width: 300px;
-    height: 400px;
-    
-    position: absolute;
-    top:0; right: 0; left: 0; bottom: 0;
-    margin: auto;
-    
-    /* background: url("https://i.pinimg.com/564x/6f/5a/b1/6f5ab1b470beeeeaf285bb451c63ac8f.jpg"); */
-    background-color: black;
-    background-size: cover;
-    cursor: pointer;
-    
-    -webkit-box-shadow: 0 0 5px #000;
-          box-shadow: 0 0 5px #000;
-    }
-  
-#baseball-schedule {
-    background: url("../../public/assets/baseballweather.svg");
+.work-grid {
+  display: flex;
 }
 
-   .overlay {
-    width: 100%;
-    height: 100%;
-    
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 2fr 1fr;
-    
-    background: rgba(77, 77, 77, .9);
-    color: #FEF5DF;
-    opacity: 0;
-    transition: all 0.5s;
-    
-    
-  }
-  
-  
-  .items {
-    padding-left: 20px;
-    letter-spacing: 3px;
-  }
-  
-  .head {
-    font-size: 30px;
-    line-height: 40px;
-    
-    transform: translateY(40px);
-    transition: all 0.7s;
-    
-  }
-  
-  .head p {
-    font-size: 20px;
-    line-height: 30px;
-    font-weight: 300;
+.card-container {
+  width: 300px;
+  height: 400px;
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: black;
+  background-size: cover;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 5px #000;
+  box-shadow: 0 0 5px #000;
+}
+
+#baseball-schedule {
+  background: url("../../public/assets/Work/Baseball\ Tracker.svg");
+  background-size: cover;
+}
+
+#leaf-link {
+  background: url("../../public/assets/Work/Leaf\ Link.svg");
+  background-size: cover;
+}
+
+#yard-to-table {
+  background: url("../../public/assets/Work/Yard\ to\ table.svg");
+  background-size: cover;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 2fr 1fr;
+
+  background: rgba(77, 77, 77, 0.9);
+  color: #fef5df;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.items {
+  padding-left: 20px;
+  letter-spacing: 3px;
+}
+
+.head {
+  font-size: 30px;
+  line-height: 40px;
+
+  transform: translateY(40px);
+  transition: all 0.7s;
+}
+
+.head p {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.tech {
+  font-size: 22px;
+  line-height: 10px;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s;
+}
+
+.card-container:hover .overlay {
+  opacity: 1;
+  & .head {
+    transform: translateY(0px);
   }
 
-  .tech {
-    font-size: 22px;
-    line-height: 10px;
-    font-weight: bold;  
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.7s;
-  }
- 
-  
-  .card-container:hover .overlay {
+  & .tech {
+    transform: translateY(0px);
+    transition-delay: 0.3s;
     opacity: 1;
-    & .head {
-      transform: translateY(0px);
-    }
-    
-    & .tech {
-      transform: translateY(0px);
-      transition-delay: 0.3s;
-      opacity: 1;
-    }
-    
-  } 
-  
+  }
+}
 
 /* ABOUT */
 

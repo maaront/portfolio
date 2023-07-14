@@ -301,12 +301,17 @@ font-weight: 800;
 
 .headshot {
   height: 300px;
+  transform: scaleX(-1);
 }
 #about-content p {
   font-size: 24px;
   font-weight: 300;
   padding: 0px 50px;
   max-width: 500px;
+}
+
+.red {
+    color: #f52c68;
 }
 
 /* REFERRALS */

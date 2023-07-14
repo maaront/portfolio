@@ -38,7 +38,7 @@ function Nav({ currentPage, handlePageChange }) {
           ABOUT
         </a>
       </li>
-      <li className="nav-item">
+      {/* <li className="nav-item">
         <a
           href="#referrals"
           onClick={() => handlePageChange('Referrals')}
@@ -47,7 +47,7 @@ function Nav({ currentPage, handlePageChange }) {
         >
           REFERRALS
         </a>
-      </li>
+      </li> */}
       <li className="nav-item">
         <a
           href="#contact"

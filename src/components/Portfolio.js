@@ -14,9 +14,9 @@ export default function Portfolio() {
   // Define colors for the background of each page
   const pageBackgroundColors = {
     Home: `#ffffff`,
-    Work: `#eff4fc`,
+    Work: `#ffffff`,
     About: `#ffffff`,
-    Referrals: `#eff4fc`,
+    Referrals: `#ffffff`,
     Contact: `#f52c68`,
   };
 
@@ -25,7 +25,8 @@ export default function Portfolio() {
     document.body.style.backgroundColor = pageBackgroundColors[currentPage];
   }, [currentPage]); //Re-run this effect when the currentPage changes
 
-  const pages = ["Home", "Work", "About", "Referrals", "Contact"];
+  const pages = ["Home", "Work", "About", "Contact"];
+  // const pages = ["Home", "Work", "About", "Referrals", "Contact"]; // Removed referrals
 
   // This effect is for detecting when the user scrolls and changing the page accordingly
   useEffect(() => {

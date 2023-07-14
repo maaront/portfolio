@@ -9,19 +9,23 @@ body {
 
 .fade-enter {
     opacity: 0;
+    
   }
   
   .fade-enter-active {
     opacity: 1;
+    
     transition: opacity 100ms;
   }
   
   .fade-exit {
     opacity: 1;
+    
   }
   
   .fade-exit-active {
     opacity: 0;
+    
     transition: opacity 100ms;
   }
 
@@ -37,6 +41,7 @@ body {
   flex-direction: column;
   justify-content: end;
   align-items: end;
+  z-index: 2;
 }
 
 .nav ul {
@@ -120,11 +125,12 @@ body {
 /* WORK */
 
 .body-work {
-  background-color: #eff4fc;
+  background-color: #ffffff;
+  z-index: 1;
 }
 
 #work-container {
-  background-color: #eff4fc;
+  background-color: #ffffff;
   height: 100%;
   width: 100%;
 }
@@ -187,6 +193,8 @@ card img {
 
 #contact-container {
   background-color: #f52c68;
+  position: relative;
+  z-index: -2;
 }
 
 #headline_contact {

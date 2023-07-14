@@ -8,6 +8,7 @@ function Nav({ currentPage, handlePageChange }) {
     <div class="nav-container">
     <ul className="nav">
       <li className="nav-item">
+      <div id="highlight"></div>
         <a
           href="#home"
           onClick={() => handlePageChange('Home')}
@@ -19,6 +20,7 @@ function Nav({ currentPage, handlePageChange }) {
         </a>
       </li>
       <li className="nav-item">
+        <div id="highlight"></div>
         <a
           href="#work"
           onClick={() => handlePageChange('Work')}
@@ -29,6 +31,7 @@ function Nav({ currentPage, handlePageChange }) {
         </a>
       </li>
       <li className="nav-item">
+      <div id="highlight"></div>
         <a
           href="#about"
           onClick={() => handlePageChange('About')}
@@ -39,6 +42,7 @@ function Nav({ currentPage, handlePageChange }) {
         </a>
       </li>
       {/* <li className="nav-item">
+      <div id="highlight"></div>
         <a
           href="#referrals"
           onClick={() => handlePageChange('Referrals')}
@@ -49,6 +53,7 @@ function Nav({ currentPage, handlePageChange }) {
         </a>
       </li> */}
       <li className="nav-item">
+      <div id="highlight"></div>
         <a
           href="#contact"
           onClick={() => handlePageChange('Contact')}

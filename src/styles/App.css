@@ -60,26 +60,26 @@ body {
   text-decoration: none;
 }
 
-.nav-container::after {
-  content: "";
-  position: absolute;
-  background-color: #eff4fc;
-  height: 200px;
-  top: 0;
-  width: 25px;
-  right: 18px;
-  z-index: -1;
-}
+.nav-item:hover > #highlight {
+    width: 100px;
+    height: 5px;
+    padding-bottom: 10px;
+    margin-top: 15px;
+/* I NEED TO SORT OUT THE TRANSITION OUT STILL */
+  }
 
-.nav-link:hover {
-  color: #f8d34f;
-  cursor: default;
-  transition: 0.2s;
-}
-
-.nav-link:focus {
-  color: #f8d34f;
-}
+#highlight {
+    display: inline-block;
+    position: absolute;
+    margin-right: 15px;
+    z-index: -1;
+    background-color: #F2BB05;
+    height: 5px; 
+    width: 0px;
+    transition: width 0.5s ease-out;
+    /* transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); */
+  }
+  
 
 /* HOME */
 

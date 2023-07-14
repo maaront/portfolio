@@ -90,7 +90,7 @@ export default function Portfolio() {
             // this tells react to listen to the `transitionend` event
             node.addEventListener("transitionend", done, false); // this tells react when the transition is done
           }}
-          classNames="fade" // gives a class name to the transition for css to use
+          classNames="slide" // gives a class name to the transition for css to use
         >
           {renderPage()}
         </CSSTransition>

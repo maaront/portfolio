@@ -1,13 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
+import { CSSTransition } from 'react-transition-group';
 
-export default function Home() {
+export default function HomePage() {
+  const [showHeadline, setShowHeadline] = useState(false);
+  const [showMaskText, setShowMaskText] = useState(false);
+  const [showArrow, setShowArrow] = useState(false);
+
+  useEffect(() => {
+    setShowHeadline(true);
+    setTimeout(() => setShowMaskText(true), 500); // Delay of 500ms
+    setTimeout(() => setShowArrow(true), 1000); // Delay of 1000ms
+  }, []);
+
   return (
     <div className="page-container">
-      <h1 className="headline">I MAKE</h1>
-      <div className="mask-text">
-        <h1 id="headline-2">DIGITAL <br></br>PRODUCTS</h1>
-      </div>
-      <img className="home-arrow" src="/assets/down-arrow.svg" alt="arrow" />
+      <CSSTransition in={showHeadline} timeout={500} classNames="fade" unmountOnExit>
+        <h1 className="headline">I MAKE</h1>
+      </CSSTransition>
+      <CSSTransition in={showMaskText} timeout={500} classNames="fade" unmountOnExit>
+        <div className="mask-text">
+          <h1 id="headline-2">DIGITAL <br></br>PRODUCTS</h1>
+        </div>
+      </CSSTransition>
+      <CSSTransition in={showArrow} timeout={500} classNames="slide-down" unmountOnExit>
+        <img className="home-arrow" src="/assets/down-arrow.svg" alt="arrow" />
+      </CSSTransition>
     </div>
   );
 }

@@ -5,38 +5,60 @@ body {
   font-family: "BioRhyme", serif;
 }
 
+/* GLOBAL STYLES*/
+
+.slide-enter {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.slide-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 500ms, transform 500ms ease-out;
+}
+
+.slide-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-exit-active {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 500ms, transform 500ms ease-out;
+}
+
+.page-container {
+  padding: 75px 0 0 50px;
+}
+
 /*PAGE TRANSITION ANIMATION*/
 
 .fade-enter {
-    opacity: 0;
-    
-  }
-  
-  .fade-enter-active {
-    opacity: 1;
-    
-    transition: opacity 100ms;
-  }
-  
-  .fade-exit {
-    opacity: 1;
-    
-  }
-  
-  .fade-exit-active {
-    opacity: 0;
-    
-    transition: opacity 100ms;
-  }
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 100ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+
+  transition: opacity 100ms;
+}
 
 /* NAVIGATION */
 
 .nav {
   margin-top: 25px;
   background-color: inherit;
-  /* position: absolute;
-    top: 0; */
-  /* left: 20; */
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -50,65 +72,36 @@ body {
 
 .nav li {
   list-style: none;
-  font-weight: 800;
+  font-weight: 400;
   margin-right: 2rem;
-  line-height: 2rem;
+  line-height: 1.5rem;
 }
 
 .nav li a {
-  color: #00cea0;
+  color: #000;
   text-decoration: none;
 }
 
 .nav-item:hover > #highlight {
-    width: 100px;
-    height: 5px;
-    padding-bottom: 10px;
-    margin-top: 15px;
-/* I NEED TO SORT OUT THE TRANSITION OUT STILL */
-  }
+  width: 100%;
+  /* I NEED TO SORT OUT THE TRANSITION OUT STILL */
+}
 
 #highlight {
-    display: inline-block;
-    position: absolute;
-    margin-right: 15px;
-    z-index: -1;
-    background-color: #F2BB05;
-    height: 5px; 
-    width: 0px;
-    transition: width 0.5s ease-out;
-    /* transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); */
-  }
+  display: inline-block;
+  position: absolute;
+  margin-right: 20px;
+  z-index: -1;
+  background-color: #f2bb05;
+  height: 5px;
+  width: 0px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  transition: width 0.5s ease-in-out;
   
+}
 
 /* HOME */
-
-.slide-enter {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  
-  .slide-enter-active {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 500ms, transform 500ms ease-out;
-  }
-  
-  .slide-exit {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .slide-exit-active {
-    opacity: 0;
-    transform: translateY(-50px);
-    transition: opacity 500ms, transform 500ms ease-out;
-  }
-  
-
-.page-container {
-  padding-left: 50px;
-}
 
 .headline {
   font-size: 60px;
@@ -146,47 +139,45 @@ body {
 }
 
 .fade-enter {
-    opacity: 0;
-    
-  }
-  
-  .fade-enter-active {
-    opacity: 1;
-    transition: opacity 500ms;
-  }
-  
-  .fade-exit {
-    opacity: 1;
-    
-  }
-  
-  .fade-exit-active {
-    opacity: 0;
-    
-    transition: opacity 500ms;
-  }
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+
+  transition: opacity 500ms;
+}
 
 .slide-down-enter {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  
-  .slide-down-enter-active {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 500ms, transform 500ms ease-out;
-  }
-  
-  .slide-down-exit {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .slide-down-exit-active {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 500ms, transform 500ms ease-out;
-  }
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+.slide-down-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 500ms, transform 500ms ease-out;
+}
+
+.slide-down-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-down-exit-active {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 500ms, transform 500ms ease-out;
+}
 
 /* WORK */
 
@@ -272,7 +263,6 @@ card img {
   color: white;
   font-size: 50px;
   font-weight: 600;
-  
 }
 
 input {
@@ -318,7 +308,7 @@ input {
   font-size: 35px;
   font-weight: 600;
   text-align: center;
-  text-shadow: 0 .25em 0.25em rgba(0,0,0,0.65);
+  text-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.65);
   background-repeat: repeat-x;
   background-size: 75%;
   animation: animatedButton 35s linear infinite;
@@ -329,8 +319,6 @@ input {
   text-align: center;
   margin-top: 25px;
 }
-
-
 
 @keyframes animatedButton {
   from {

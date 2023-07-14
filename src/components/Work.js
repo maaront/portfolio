@@ -3,7 +3,7 @@ import React from "react";
 export default function Work() {
   return (
     <div className="page-container" id="work-container">
-      <h2 className="headline" id="headline_work">
+      <h2 className="headline">
         WORK
       </h2>
       <card>

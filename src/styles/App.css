@@ -325,7 +325,7 @@ font-weight: 800;
 #contact-container {
   background-color: #f52c68;
   position: relative;
-  z-index: -2;
+  /* z-index: -2; */
 }
 
 #headline_contact {
@@ -337,6 +337,7 @@ font-weight: 800;
   color: white;
   font-size: 50px;
   font-weight: 600;
+  line-height: 4rem;
 }
 
 input {
@@ -344,6 +345,11 @@ input {
   border: 0;
   border-bottom: 5px solid white;
   background: none;
+  outline:  none;
+  color: white;
+  font-size: 50px;
+  font-weight: 600;
+  font-family: "BioRhyme", serif;
 }
 
 /* BUTTON WITH TRADITIONAL GRADIENT*/

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
 export default function Contact() {
-  const [inputWidth, setInputWidth] = useState("auto"); // Initial width of the input field
+  const [inputWidth, setInputWidth] = useState(350); // Initial width of the input field
 
   const handleInputChange = (event) => {
     const inputValue = event.target.value;
-    const textWidth = inputValue.length > 0 ? event.target.scrollWidth + "px" : "auto"; // Set the width based on content or to auto if the field is empty
+    const textWidth = inputValue.length * 10; // Adjust the multiplier to determine the width increase per character
 
     setInputWidth(textWidth);
   };

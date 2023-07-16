@@ -87,6 +87,10 @@ body {
   /* I NEED TO SORT OUT THE TRANSITION OUT STILL */
 }
 
+.nav-link active {
+    
+}
+
 #highlight {
   display: inline-block;
   position: absolute;
@@ -111,6 +115,7 @@ body {
   font-size: 60px;
   font-weight: 600;
   color: #f8d34f;
+  margin: 0;
 }
 
 #headline-2 {
@@ -125,6 +130,7 @@ body {
   background-repeat: repeat-x;
   background-size: 50%;
   animation: animatedBackground 75s linear infinite;
+  margin: 0;
 }
 
 @keyframes animatedBackground {
@@ -342,7 +348,7 @@ font-weight: 800;
 }
 
 input {
-  width: 300px;
+  width: 250px;
   border: 0;
   border-bottom: 5px solid white;
   background: none;

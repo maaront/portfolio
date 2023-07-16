@@ -6,6 +6,7 @@ import Home from "./Home";
 import Nav from "./Nav";
 import Referrals from "./Referrals";
 import Work from "./Work";
+import Highlight from "./Highlight";
 
 export default function Portfolio() {
   const [currentPage, setCurrentPage] = useState("Home");
@@ -98,3 +99,5 @@ export default function Portfolio() {
     </div>
   );
 }
+
+Highlight();

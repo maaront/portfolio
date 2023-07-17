@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.7afb82b5.css",
+    "main.js": "/portfolio/static/js/main.416c80b9.js",
+    "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/Yard to table.svg": "/portfolio/static/media/Yard to table.4eeb65017bd276a9c066.svg",
+    "static/media/Baseball Tracker.svg": "/portfolio/static/media/Baseball Tracker.7e94bbee4eca95dfb64a.svg",
+    "static/media/Leaf Link.svg": "/portfolio/static/media/Leaf Link.16bfd2383601c6724561.svg",
+    "index.html": "/portfolio/index.html",
+    "main.7afb82b5.css.map": "/portfolio/static/css/main.7afb82b5.css.map",
+    "main.416c80b9.js.map": "/portfolio/static/js/main.416c80b9.js.map",
+    "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7afb82b5.css",
+    "static/js/main.416c80b9.js"
+  ]
+}

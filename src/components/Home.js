@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
 export default function HomePage() {
+  
   const [showHeadline, setShowHeadline] = useState(false);
   const [showMaskText, setShowMaskText] = useState(false);
   const [showArrow, setShowArrow] = useState(false);
@@ -14,8 +15,8 @@ export default function HomePage() {
 
   return (
     <div className="home-container">
-      <CSSTransition in={showHeadline} timeout={500} classNames="fade" unmountOnExit>
-        <h1 className="headline">I MAKE</h1>
+      <CSSTransition in={showHeadline} timeout={1000} classNames="fade" unmountOnExit>
+        <h1 className="headline">My name is Matt,<br></br>and I make</h1>
       </CSSTransition>
       <CSSTransition in={showMaskText} timeout={500} classNames="fade" unmountOnExit>
         <div className="mask-text">

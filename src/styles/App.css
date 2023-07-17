@@ -144,8 +144,8 @@ body {
 
 .home-arrow {
   /* transform: rotate(-90deg); */
-  height: 100px;
-  padding: 15px 20px;
+  height: 75px;
+  padding: 15px 0px;
 }
 
 .fade-enter {
@@ -415,3 +415,26 @@ input {
     background-position: 100% 100%;
   }
 }
+
+
+/* CONTACT ICONS */
+
+.contact-icon-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 20px;
+  }
+  
+  .contact-icon {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0 15px 5px 0;
+    height: 50px;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+  }

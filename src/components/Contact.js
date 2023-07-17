@@ -52,6 +52,11 @@ export default function Contact() {
 
         <input className="btn" type="submit" value="SEND" />
       </form>
+       <section className="contact-icon-container">
+      <a href="mailto:matthewturnera@gmail.com"><img className="contact-icon" src="assets/envelope-regular.svg"></img></a>
+      <a href="https://github.com/maaront"><img className="contact-icon" src="assets/github.svg"></img></a>
+      <a href="https://www.linkedin.com/in/matthewaaronturner/"><img className="contact-icon" src="assets/linkedin-in.svg"></img></a>
+      </section>
     </div>
   );
 }

@@ -15,7 +15,10 @@ export default function HomePage() {
     setTimeout(() => setShowArrow(true), 1000); // Delay of 1000ms
 
     const interval = setInterval(() => {
-      setCurrentHeadlineIndex((prevIndex) => (prevIndex + 1) % headlines.length);
+      setCurrentHeadlineIndex((prevIndex) => {
+        const newIndex = (prevIndex + 1) % headlines.length;
+        return newIndex === 0 ? headlines.length - 1 : newIndex;
+      });
     }, 3000);
 
     return () => clearInterval(interval);
@@ -28,7 +31,15 @@ export default function HomePage() {
       </CSSTransition>
       <CSSTransition in={showMaskText} timeout={500} classNames="fade" unmountOnExit>
         <div className="mask-text">
-          <h1 id="headline-2">{headlines[currentHeadlineIndex]}</h1>
+          <CSSTransition
+            in={showMaskText}
+            timeout={500}
+            classNames="fade"
+            unmountOnExit
+            key={currentHeadlineIndex}
+          >
+            <h1 id="headline-2">{headlines[currentHeadlineIndex]}</h1>
+          </CSSTransition>
         </div>
       </CSSTransition>
       <CSSTransition in={showArrow} timeout={500} classNames="slide-down" unmountOnExit>

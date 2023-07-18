@@ -43,7 +43,7 @@ export default function HomePage() {
         </div>
       </CSSTransition>
       <CSSTransition in={showArrow} timeout={500} classNames="slide-down" unmountOnExit>
-        {/* <img className="home-arrow" src="/assets/down-arrow.svg" alt="arrow" /> */}
+        <img className="home-arrow" src="/assets/down-arrow.svg" alt="arrow" />
       </CSSTransition>
     </div>
   );
